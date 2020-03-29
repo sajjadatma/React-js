@@ -1,10 +1,20 @@
 import React, { Component } from "react";
 import "./Cart.css";
 class Cart extends Component {
+
   state = {
     playerTurn: ""
   };
+  // if a player win or x-o draw get state and changed it to ""
+  componentWillReceiveProps() {
+    if (this.props.winOrDraw !== null) {
+      this.setState({
+        playerTurn: ""
+      });
+    }
+  }
 
+  //Change Player State;
   getItem = Player => {
     const player = Player.find(item => item.playerTurn === true);
     this.setState({
@@ -16,13 +26,7 @@ class Cart extends Component {
       });
     }
   };
-  componentWillReceiveProps() {
-    if (this.props.winOrDraw !== null) {
-      this.setState({
-        playerTurn: ""
-      });
-    }
-  }
+
   render() {
     const O = <div className="O"></div>;
     const X = <div className="X"></div>;
