@@ -1,0 +1,33 @@
+.Cart {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.1rem;
+    cursor: pointer;
+}
+div:disabled,
+div[disabled]{
+    cursor: not-allowed;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.O::before {
+    content: 'O';
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 300;
+    font-family: Arial, sans-serif
+}
+.X::before {
+   content: 'X';
+   font-size: 5rem;
+   color: #fff;
+   font-weight: 300;
+   font-family: Arial, sans-serif
+
+}
